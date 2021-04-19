@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ pelicula?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  
+  <ion-card>
+    <div style="width:100%;text-align: center;align-content: center;align-self: center;">
+      <img [src]="pelicula?.poster"/>
+    </div>
+    <ion-card-header>
+      <ion-card-title>{{ pelicula?.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p><strong>Director: </strong>{{ pelicula?.director }}</p>
+      <p><strong>Año: </strong>{{ pelicula?.year }}</p>
+      <p><strong>Sipnosis: </strong>{{ pelicula?.synopsis }}</p>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>iVideoclub</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ 
+  <ion-list *ngIf="peliculas && peliculas.length > 0 ; else listaVacia">
+
+    <ion-item button mode="ios" *ngFor="let pelicula of peliculas" (click)="detalle( pelicula.id )">
+ 
+      <ion-thumbnail slot="start">
+        <img [src]="pelicula.poster">
+      </ion-thumbnail>
+
+      <ion-label>
+        <h2>{{ pelicula.title }}</h2>
+        <p> <strong>Director: </strong>{{ pelicula.director }}</p>
+        <p> <strong>Año: </strong>{{ pelicula.year }}</p>
+      </ion-label>
+    </ion-item>
+  
+
+  </ion-list>
+
+
+
+  <ng-template #listaVacia>
+    <p>Lista de peliculas vacia.</p>
+  </ng-template>
+
+
+
+</ion-content>

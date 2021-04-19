@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Bienvenido a</ion-card-subtitle>
+      <ion-card-title>¡Videoclub!</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      iVideoclub es una aplicación desarrollada con Ionic. Para acceder a la gestión del videoclub pulsa el siguiente botón:
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-button color="light"
+                  routerLink="/videoclub">
+        <ion-icon slot="start" name="videocam"></ion-icon>
+        Acceso a iVideoclub
+      </ion-button>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información sobre el autor</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Aplicación desarrollada por Mariana Olivas.
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-button color="light" 
+                routerLink="/autor">
+        <ion-icon slot="start" 
+                  name="person"></ion-icon>
+        Consultar información
+      </ion-button>
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>
